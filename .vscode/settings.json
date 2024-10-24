@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true, // 保存時に自動フォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never", // 保存時にESLintのルール違反を自動修正
+    "source.fixAll.eslint": "never" // ESLintによるすべての自動修正を有効に
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // JavaScriptのデフォルトフォーマッターをPrettierに設定
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // TypeScriptのデフォルトフォーマッターをPrettierに設定
+  }
+}
