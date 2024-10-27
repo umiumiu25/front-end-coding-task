@@ -1,12 +1,87 @@
 {
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  },
   "extends": [
     "next/core-web-vitals",
     "next/typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/order": [
+      "error", //他のeslintルール同様、errorとするかwarningとするか設定
+      {
+        "groups": [
+          //大まかな並び順を設定
+          "builtin",
+          "external",
+          "sibling",
+          "parent",
+          "object",
+          "type",
+          "index"
+        ],
+        "alphabetize": { "order": "asc", "caseInsensitive": false }, //グループ内でアルファベット順に並べるかを設定
+        "newlines-between": "never", // グループ間の改行に関する設定
+        "pathGroups": [
+          // 特定パスのimportを任意のグループに配置するための設定
+          {
+            "pattern": "@/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@components/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@utils/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@styles/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@hooks/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@lib/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@types/**",
+            "group": "external",
+            "position": "after"
+          }
+        ]
+      }
+    ],
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": "src/app",
+            "from": "src/components/button/Button.tsx"
+          }
+        ]
+      }
+    ]
   }
 }
