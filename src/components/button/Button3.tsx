@@ -8,15 +8,17 @@ const Button3: React.FC<ButtonProps> = ({
   onClick,
   addButtonStyle,
   Icon,
+  target,
 }) => {
   return (
     <Button
       type={type}
       label={label}
       onClick={onClick}
-      className={`${styles.button_common} ${styles.button_changeable} ${styles.button3}`}
+      className={styles.button3}
       addButtonStyle={addButtonStyle}
       Icon={Icon}
+      target={target}
     />
   );
 };

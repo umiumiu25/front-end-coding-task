@@ -14,6 +14,7 @@ export default function Home() {
         label="編集"
         onClick={() => console.log("test")}
         Icon={RiPencilLine}
+        target="https://www.google.com"
       />
       <Button2
         type="button"

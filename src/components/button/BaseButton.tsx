@@ -8,12 +8,23 @@ const Button: React.FC<AbstractButtonProps> = ({
   className = styles.button,
   addButtonStyle,
   Icon,
+  target,
 }) => {
-  return (
+  return typeof target === "string" ? (
+    <a
+      href={target}
+      target="_blank"
+      rel="noreferrer"
+      className={`${styles.button_common} ${styles.button_changeable} ${className}`}
+      style={addButtonStyle}
+    >
+      {Icon && <Icon />} {label}
+    </a>
+  ) : (
     <button
       type={type}
       onClick={onClick}
-      className={className}
+      className={`${styles.button_common} ${styles.button_changeable} ${className}`}
       style={addButtonStyle}
     >
       {Icon && <Icon />} {label}
