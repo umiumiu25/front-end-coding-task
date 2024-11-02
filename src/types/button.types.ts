@@ -12,6 +12,7 @@ export type AbstractButtonProps = {
   className?: string;
   addButtonStyle?: AddButtonStyle;
   Icon?: IconType;
+  target?: string;
 };
 
 export type ButtonProps = Omit<AbstractButtonProps, "className">;
