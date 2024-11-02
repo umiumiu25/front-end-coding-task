@@ -1,6 +1,6 @@
 import styles from "@/styles/Button.module.css";
 import { ButtonProps } from "@/types/button.types";
-import Button from "./Button";
+import Button from "./BaseButton";
 
 const Button3: React.FC<ButtonProps> = ({
   type,
@@ -14,7 +14,7 @@ const Button3: React.FC<ButtonProps> = ({
       type={type}
       label={label}
       onClick={onClick}
-      className={styles.button3}
+      className={`${styles.button_common} ${styles.button_changeable} ${styles.button3}`}
       addButtonStyle={addButtonStyle}
       Icon={Icon}
     />

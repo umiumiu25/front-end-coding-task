@@ -13,21 +13,18 @@ export default function Home() {
         type="button"
         label="編集"
         onClick={() => console.log("test")}
-        addButtonStyle={{ width: "400px", height: "80px" }}
         Icon={RiPencilLine}
       />
       <Button2
         type="button"
         label="編集"
         onClick={() => console.log("test")}
-        addButtonStyle={{ width: "400px", height: "80px" }}
         Icon={RiPencilLine}
       />
       <Button3
         type="button"
         label="編集"
         onClick={() => console.log("test")}
-        addButtonStyle={{ width: "400px", height: "80px" }}
         Icon={RiPencilLine}
       />
     </div>

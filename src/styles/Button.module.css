@@ -1,51 +1,59 @@
-.button {
-  width: 400px;
-  height: 800px;
-  padding: 8px 16px;
-  background-color: black;
-  font-size: 1.2rem;
-  color: white;
-  border: none;
-  border-radius: 4px;
+/* モバイルファースト */
+
+.button_common {
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.button_changeable {
+  width: 90%;
+  height: 50px;
+  min-height: 50px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
 }
 
 .button1 {
-  width: 400px;
-  height: 800px;
-  padding: 8px 16px;
   background-color: black;
-  font-size: 1.2rem;
   color: white;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .button2 {
-  width: 400px;
-  height: 800px;
-  padding: 8px 16px;
   background-color: white;
-  font-size: 1.2rem;
   color: black;
   border: solid 2px black;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .button3 {
-  width: 400px;
-  height: 800px;
-  padding: 8px 16px;
   background-color: white;
-  font-size: 1.2rem;
   color: black;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+
+/* タブレット向け */
+@media (min-width: 481px) {
+  .button_changeable {
+    width: 350px;
+    height: 70px;
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+}
+
+/* パソコン向け */
+@media (min-width: 769px) {
+  .button_changeable {
+    width: 400px; /* 画面幅いっぱいに */
+    height: 80px; /* 高さを自動調整 */
+    padding: 8px 16px;
+    font-size: 1.2rem;
+  }
 }
