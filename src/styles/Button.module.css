@@ -43,6 +43,20 @@
   border: none;
 }
 
+.button_common:hover {
+  transform: scale(1.1);
+}
+
+.button_common:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button_common:disabled {
+  background-color: #ddd; /* ボタンの色を薄く */
+  cursor: not-allowed; /* カーソルを禁止マークに */
+  opacity: 0.6; /* 半透明にして無効感を出す */
+}
+
 /* タブレット向け */
 @media (min-width: 481px) {
   .button_changeable {
