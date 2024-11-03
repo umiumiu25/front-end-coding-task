@@ -7,25 +7,24 @@ import Button3 from "@/components/button/Button3";
 import styles from "@/styles/page.module.css";
 
 export default function Home() {
+  const onClick = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+  };
+
   return (
     <div className={styles.page}>
       <Button1
         type="button"
         label="編集"
-        onClick={() => console.log("test")}
+        onClick={onClick}
         Icon={RiPencilLine}
         target="https://www.google.com"
       />
-      <Button2
-        type="button"
-        label="編集"
-        onClick={() => console.log("test")}
-        Icon={RiPencilLine}
-      />
+      <Button2 type="button" label="編集" Icon={RiPencilLine} />
       <Button3
         type="button"
         label="編集"
-        onClick={() => console.log("test")}
+        onClick={onClick}
         Icon={RiPencilLine}
       />
     </div>

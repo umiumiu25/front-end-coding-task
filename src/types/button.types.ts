@@ -8,7 +8,7 @@ export type AddButtonStyle = {
 export type AbstractButtonProps = {
   type: "button" | "submit";
   label: string;
-  onClick?: () => void;
+  onClick?: () => Promise<void>;
   className?: string;
   addButtonStyle?: AddButtonStyle;
   Icon?: IconType;
