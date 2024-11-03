@@ -1,24 +1,23 @@
-import styles from "@/styles/Button.module.css";
 import { ButtonProps } from "@/types/button.types";
-import Button from "./BaseButton";
+import BaseButton from "./BaseButton";
 
 const Button2: React.FC<ButtonProps> = ({
   type,
   label,
   onClick,
-  addButtonStyle,
   Icon,
   target,
+  addButtonStyleByExternal,
 }) => {
   return (
-    <Button
+    <BaseButton
       type={type}
       label={label}
-      onClick={onClick}
-      className={styles.button2}
-      addButtonStyle={addButtonStyle}
       Icon={Icon}
+      onClick={onClick}
       target={target}
+      addButtonStyleByInternal="button2"
+      addButtonStyleByExternal={addButtonStyleByExternal}
     />
   );
 };
