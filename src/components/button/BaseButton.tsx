@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import styles from "@/styles/Button.module.css";
-import { Button } from "@/components/button/button.style";
 import { AbstractButtonProps } from "@/types/button.types";
+import { Button } from "./button.style";
 
 const BaseButton: React.FC<AbstractButtonProps> = ({
   type,
