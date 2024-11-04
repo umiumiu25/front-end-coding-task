@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# フロントエンドコーディング課題
 
-## Getting Started
+## 説明
 
-First, run the development server:
+特になし
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## インストール
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **リポジトリをクローン**: ``
+2. **依存関係をインストール**: `npm ci`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ディレクトリ構成
+src
+├── app
+├── components
+└── types
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+app: ページ用コンポーネントを管理
+components ボタン等の部品コンポーネントを管理
+types: TypeScriptの型定義を管理
 
-## Learn More
+## 開発の手順
 
-To learn more about Next.js, take a look at the following resources:
+- **ローカルサーバの起動**: `npm run dev`
+- **テストの実行**: `npm run test`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 使用技術
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **実装**
+  - Next.js
+  - Typescript
+- **テスト**
+  - Vitest
+- **コード整形/規則**
+  - Prettier
+  - ESLint
+  - husky
+- **バージョン管理**
+  - git
 
-## Deploy on Vercel
+## 開発メモ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- gitコミット時に自動的にlinter/prettierによるコード修正・整形が行われる。（huskyによって）
+- CSS-in-JSを使用
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ライセンス
+
+TODO: 必要であれば記載
