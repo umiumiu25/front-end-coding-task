@@ -20,9 +20,8 @@ const Button = styled.button<ButtonStyleProps>`
   justify-content: center;
   align-items: center;
 
-  width: 90%;
+  width: 250px;
   height: 50px;
-  min-height: 50px;
   padding: 4px 8px;
   font-size: 0.9rem;
 
@@ -70,7 +69,7 @@ const Button = styled.button<ButtonStyleProps>`
   }
 
   /* タブレット向け */
-  @media (min-width: 481px) {
+  @media (min-width: 480px) {
     width: 350px;
     height: 70px;
     padding: 6px 12px;
@@ -78,7 +77,7 @@ const Button = styled.button<ButtonStyleProps>`
   }
 
   /* パソコン向け */
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     width: 400px; /* 画面幅いっぱいに */
     height: 80px; /* 高さを自動調整 */
     padding: 8px 16px;
